@@ -9,4 +9,14 @@ public class Driver extends User{
         this.model=model;
         this.LicenceId=LicenceId;
     }
+    public String get_VehNo(){
+        return VehicleNumber;
+    }
+    public String get_model(){
+        return model;
+    }
+    public String get_LicId(){
+        return LicenceId;
+    }
+    
 }
