@@ -1,3 +1,4 @@
+package models;
 public class Driver extends User{
     private String VehicleNumber;
     private String model;
