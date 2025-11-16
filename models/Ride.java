@@ -1,3 +1,5 @@
+package models;
+
 public class Ride{
     private String rideId;
     private String riderId;

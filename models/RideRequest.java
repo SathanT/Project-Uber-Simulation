@@ -35,14 +35,14 @@ public class RideRequest {
 
 
     public Location get_drop(){
-        return id;
+        return drop;
     }
     public void set_drop(Location drop){
         this.drop=drop;
     }
 
 
-    public Loation get_pickup(){
+    public Location get_pickup(){
         return pickup;
     }
     public void set_pickup(Location pickup){
