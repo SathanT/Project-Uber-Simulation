@@ -15,6 +15,12 @@ public class Ride{
         this.fare=fare;
     }
 
+    public Ride(String rideId,String riderId,String driverId){
+        this.rideId=rideId;
+        this.riderId=riderId;
+        this.driverId=driverId;
+    }
+
     public String get_ride_id(){
         return rideId;
     }
