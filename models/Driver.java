@@ -1,6 +1,6 @@
 package models;
 public class Driver extends User{
-    private  enum Status {
+    public  enum Status {
         AVAILABLE,
         ON_RIDE,
         OFFLINE
@@ -11,12 +11,37 @@ public class Driver extends User{
     private Status status;
     private Location curr_location;
 
-    public Driver(String name,String id,String phone,String VehicleNumber,String model,String LicenceId,Location curr_location){
+    public Driver(String name,String id,String phone,String VehicleNumber,String model,String LicenceId,Location curr_location,Driver.Status status){
         super(id,name,phone);
         this.VehicleNumber=VehicleNumber;
         this.model=model;
         this.LicenceId=LicenceId;
         this.curr_location=curr_location;
+        this.status=status;
+    }
+
+
+    public String get_id(){
+        return id;
+    }
+    public void set_id(String id){
+        this.id=id;
+    }
+
+
+    public String get_name(){
+        return name;
+    }
+    public void set_name(String name){
+        this.name=name;
+    }
+
+
+    public String get_phone(){
+        return phone;
+    }
+    public void set_phone(String phone){
+        this.phone=phone;
     }
 
 
@@ -52,6 +77,9 @@ public class Driver extends User{
     }
 
 
+    public void set_status(Driver.Status status){
+        this.status=status;
+    }
     public boolean isAvailable(){
         return this.status==Status.AVAILABLE;
     }

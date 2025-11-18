@@ -3,22 +3,29 @@ package models;
 public class Ride{
     private String rideId;
     private String riderId;
-    private String driverId;
+    private Driver driver;
     private RideRequest.Status status;
+    private Location pickup;
+    private Location drop;
     private int fare;
 
-    public Ride(String rideId,String riderId,String driverId,RideRequest.Status status,int fare){
+    public Ride(String rideId,String riderId,Driver driver,RideRequest.Status status,int fare){
         this.rideId=rideId;
         this.riderId=riderId;
-        this.driverId=driverId;
+        this.driver=driver;
         this.status=status;
         this.fare=fare;
     }
 
-    public Ride(String rideId,String riderId,String driverId){
+    public Ride(String rideId,String riderId,Driver driver){
         this.rideId=rideId;
         this.riderId=riderId;
-        this.driverId=driverId;
+        this.driver=driver;
+    }
+
+    public Ride(Location pickup,Location drop){
+        this.pickup=pickup;
+        this.drop=drop;
     }
 
     public String get_ride_id(){
@@ -37,11 +44,11 @@ public class Ride{
     }
 
 
-    public String get_driver_id(){
-        return driverId;
+    public Driver get_driver(){
+        return driver;
     }
-    public void set_driver_id(String driverId){
-        this.driverId=driverId;
+    public void set_driver_id(Driver driver){
+        this.driver=driver;
     }
 
 
@@ -58,5 +65,21 @@ public class Ride{
     }
     public void set_fare(int fare){
         this.fare=fare;
+    }
+
+
+    public void set_pickup(Location pickup){
+        this.pickup=pickup;
+    }
+    public Location get_pickup(){
+        return pickup;
+    }
+
+
+    public void set_drop(Location drop){
+        this.drop=drop;
+    }
+    public Location get_drop(){
+        return drop;
     }
 }

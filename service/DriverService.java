@@ -11,7 +11,7 @@ public class DriverService {
         drivers.add(driver);
     }
 
-    public List<Driver> get_driver(){
+    public List<Driver> get_drivers(){
         return drivers.stream().filter(d -> d.isAvailable()).collect(Collectors.toList());
     }
 

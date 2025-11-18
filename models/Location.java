@@ -13,4 +13,10 @@ public class Location {
     public int get_lon(){
         return lon;
     }
+    public void set_lot(int lot){
+        this.lot=lot;
+    }
+    public void eet_lon(int lon){
+        this.lon=lon;
+    }
 }
